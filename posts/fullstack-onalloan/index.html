@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="hu" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Full stack fejlesztő önállóan, kezdőknek - WIP Coder</title>
+  <meta name="description" content="Mi az a full stack fejlesztés? A full stack fejlesztők olyan fejlesztők akik atlátják a webes rendszerek minden részletét. Ebben a cikk sorozatban azt mutatom be:
+(1. resz) Milyen részei vannak a webes rendszereknek? (1. resz) Milyen tudás kell ezeknek a fejlesztéséhez? (1. resz) Hogyan lehet megtanulni? (2. resz) Backend fejlesztés Go nyelven (3. resz) Frontend fejlesztés (html, css, js) Webes rendszerek felépítése Frontend: program ami a böngészőben fut (általában JavaScript).">
+  <meta name="author" content="Milan"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "WIP Coder",
+    
+    "url": "https:\/\/cmldev2.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/cmldev2.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/cmldev2.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/cmldev2.github.io\/posts\/fullstack-onalloan\/",
+          "name": "Full stack fejlesztő önállóan, kezdőknek"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Milan"
+  },
+  "headline": "Full stack fejlesztő önállóan, kezdőknek",
+  "description" : "Mi az a full stack fejlesztés? A full stack fejlesztők olyan fejlesztők akik atlátják a webes rendszerek minden részletét. Ebben a cikk sorozatban azt mutatom be:\n(1. resz) Milyen részei vannak a webes rendszereknek? (1. resz) Milyen tudás kell ezeknek a fejlesztéséhez? (1. resz) Hogyan lehet megtanulni? (2. resz) Backend fejlesztés Go nyelven (3. resz) Frontend fejlesztés (html, css, js) Webes rendszerek felépítése Frontend: program ami a böngészőben fut (általában JavaScript).",
+  "inLanguage" : "hu",
+  "wordCount":  945 ,
+  "datePublished" : "2022-07-30T19:40:07",
+  "dateModified" : "2022-07-30T19:40:07",
+  "image" : "https:\/\/cmldev2.github.io\/",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/cmldev2.github.io\/posts\/fullstack-onalloan\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/cmldev2.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/cmldev2.github.io\/",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Full stack fejlesztő önállóan, kezdőknek" />
+<meta property="og:description" content="Mi az a full stack fejlesztés? A full stack fejlesztők olyan fejlesztők akik atlátják a webes rendszerek minden részletét. Ebben a cikk sorozatban azt mutatom be:
+(1. resz) Milyen részei vannak a webes rendszereknek? (1. resz) Milyen tudás kell ezeknek a fejlesztéséhez? (1. resz) Hogyan lehet megtanulni? (2. resz) Backend fejlesztés Go nyelven (3. resz) Frontend fejlesztés (html, css, js) Webes rendszerek felépítése Frontend: program ami a böngészőben fut (általában JavaScript).">
+<meta property="og:url" content="https://cmldev2.github.io/posts/fullstack-onalloan/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="WIP Coder" />
+
+  <meta name="twitter:title" content="Full stack fejlesztő önállóan, kezdőknek" />
+  <meta name="twitter:description" content="Mi az a full stack fejlesztés? A full stack fejlesztők olyan fejlesztők akik atlátják a webes rendszerek minden részletét. Ebben a cikk sorozatban azt mutatom be:
+(1. resz) Milyen részei vannak a …">
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://cmldev2.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.101.0" />
+  <link rel="alternate" href="https://cmldev2.github.io/index.xml" type="application/rss+xml" title="WIP Coder"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="https://cmldev2.github.io/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://cmldev2.github.io/css/highlight.min.css" /><link rel="stylesheet" href="https://cmldev2.github.io/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://cmldev2.github.io/">WIP Coder</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Posts" href="/posts/">Posts</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="posts-heading">
+              
+                <h1>Full stack fejlesztő önállóan, kezdőknek</h1>
+              
+              
+                <hr class="small">
+              
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <h2 id="mi-az-a-full-stack-fejlesztés">Mi az a full stack fejlesztés?</h2>
+<p>A full stack fejlesztők olyan fejlesztők akik atlátják a webes rendszerek minden részletét.
+Ebben a cikk sorozatban azt mutatom be:</p>
+<ul>
+<li>(1. resz) Milyen részei vannak a webes rendszereknek?</li>
+<li>(1. resz) Milyen tudás kell ezeknek a fejlesztéséhez?</li>
+<li>(1. resz) Hogyan lehet megtanulni?</li>
+<li>(2. resz) Backend fejlesztés Go nyelven</li>
+<li>(3. resz) Frontend fejlesztés (html, css, js)</li>
+</ul>
+<h2 id="webes-rendszerek-felépítése">Webes rendszerek felépítése</h2>
+<p><img src="/posts/fullstack-onalloan/webes_rendszer_reszei.png" alt="Webes rendszer reszei"></p>
+<p><strong>Frontend:</strong> program ami a böngészőben fut (általában JavaScript). Az a feladata hogy megjelenítse a felhasználói felületet (HTML, CSS), kezelje felhasználó interakcióit (kattintás, szövegbevitel, kep / hangbevitel, stb), hálózaton továbbítsa az adatokat a backendnek es a backend által visszaküldött informáciokat megjelenítse.</p>
+<p><strong>Backend:</strong> program ami a szervereken fut, figyeli a hálózaton bejövő kéréseket a frontendtől, feldolgozza és visszaküldi az eredményt.</p>
+<p>Ahhoz hogy akár böngészőben, akár szerveren futó programot tudjunk írni, először a programozás alapjait kell megtanulnunk!</p>
+<h2 id="hogyan-tanuljunk-meg-programozni">Hogyan tanuljunk meg programozni?</h2>
+<h3 id="egyesek-és-nullák">Egyesek és nullák</h3>
+<p>A programozás tanulása általában azzal kezdődik hogy a megtudjuk: &ldquo;A számítógép csak egyeseket és nullákat ismer&rdquo;, ami elsőre elég hihetetlen, mert ennél már Frédi és Béni kő-tabletjei is többet tudtak.</p>
+<p>Valójában a számítógép nagyreszt félvezető eszközökből áll, aminek 3 csatlakozasi pontja van, és az a legfontosabb tuljadonsága hogy ha 2 pontja között megfelelő a feszültség, akkor a masik 2 pontja között enged áramot folyni, különben nem enged. Erre a trükkre épülnek a digitalis számítógepek.</p>
+<p>Hogy hogyan lesz számítógép az egyszerű félvezető eszközökből azt a digitalis elektronika és számítógép architektúra anyagok tárgyaljak részletesen:</p>
+<ul>
+<li><a href="https://nostarch.com/how-computers-really-work">How Computers Really Work</a></li>
+<li><a href="https://nostarch.com/dive-systems">Dive Into Systems</a></li>
+<li><a href="https://nostarch.com/introcomporg">Introduction to Computer Organization</a></li>
+</ul>
+<p>Webfejlesztőkent, a digitális elektronika tudásra kezdetben nem lesz szükségünk és nem erdemes túl részletesen foglalkozni vele. Akkor lesz igazán érdekes ha már jobban tudunk programozni es szeretnénk gyors, hatékony programokat írni, mélyebben megérteni mi törtenik a gépben.</p>
+<p>A modern programnyelvekben ez a szint jól el van rejtve, viszont érdemes hosszú tavon minél jobban megérteni, mert ez magyarázza meg miért úgy kell programozni a gépeket ahogy, mik a képességei és a korlátai ezeknek a rendszereknek.</p>
+<h3 id="miből-all-a-programozói-tudás">Miből all a programozói tudás?</h3>
+<p><img src="/posts/fullstack-onalloan/programozas_tudas.png" alt="Programozói tudás"></p>
+<p>Egy programozási feladat megoldásához 3 dolog kell (ezeket kell megtanulni):</p>
+<ol>
+<li><strong>Környezet:</strong> Megismerni milyen műveleteket tud a rendszerunk végrehajtani</li>
+<li><strong>Algoritmusok:</strong> Kitalálni egy olyan művelet sorozatot amivel ami megoldja a feladatot</li>
+<li>Megírni a <strong>programkód</strong>ot (és kipróbálni)</li>
+</ol>
+<p>Szinte mindig felbontjuk a feladatot, sok kisebb részfeladatra, megoldjuk a részfeladatokat, összeillesztjük a részeket és ezt napi sok szazszor ismételjük.</p>
+<h3 id="hogy-kezdjuk-el">Hogy kezdjuk el?</h3>
+<p>A fenti 3 tema, mindegyike egyenként is hatalmas, es mindegyikkel több különböző tudomanyag is foglalkozik.
+Példaul ha csak az algoritmusokat nézzuk, egy átlagos bevezető konyv 1000+ oldalas, kb 30 fejezetből áll es mindegyik fejezet témájához gyorsan találnank újabb 1000+ oldalas könyveket. Az elejétol a végeig, ezt mind megtanulni, kihívást jelentő vállalkozás lenne. Szerencsére nincs ra szükség.</p>
+<p>Manapság minden tananyag ingyen vagy olcsón elérhető, minden témaban, mindenféle szempontbol.
+Viszont általában nincs egy olyan tananyag, ami a nekünk megfelelő szintről indul, eljut oda ahova szeretnénk es olyan részletességgel halad hogy követni tudjuk de nincs tele, számunkra felesleges informaciokkal.</p>
+<p>Ezért ha önalloan tanulunk, akkor a saját felelősségünk, a sajat tanulasi folyamatunk kézben tartása. Ez önmagaban is egy fontos képesseg, ebben a szakmaban, minden nap szükseg van rá.
+Az önallo tanulásrol az <a href="https://www.scotthyoung.com/blog/ultralearning/">Ultralearning</a> blogon es könyvben találunk részletes leírást.</p>
+<p>A programozás megtanulásához egy jó strategia, ha gyakorló feladatokon keresztül tanulunk. Minden egyes feladatnál utána tudunk nézni, a fenti 3 téma azon részeinek, amik relevánsak a feladathoz. A feladatokat a sikeres megoldás után, mindig nehezítjük es ezt ismételjük sokszor. Így, mire végzünk, meg lesz minden szükséges tudásunk a munkához.</p>
+<p>Akinek van ra lehetősege, érdemes egy mentort is keresni, aki tud segíteni es visszajelzést adni.</p>
+<p>Válasszunk egy programnyelvet es kezdjük el a feladatokat megoldani! Első programnyelvnek a Python az egyik legjobb lehetőség, mert egyszerű es nagyon sok jó minősegű tananyag elerheto hozza, de bármelyik megteszi.</p>
+<h3 id="gyakorló-feladatok-a-programozás-alapjaihoz-python-nyelven">Gyakorló feladatok a programozás alapjaihoz (Python nyelven)</h3>
+<ul>
+<li><a href="https://nostarch.com/learn-code-solving-problems">Learn to Code by Solving Problems</a></li>
+<li><a href="https://nostarch.com/Learn-Python-Visually">Learn Python Visually</a></li>
+<li><a href="https://nostarch.com/inventwithpython">Invent Your Own Computer Games with Python, 4th Edition</a></li>
+<li><a href="https://nostarch.com/pythonplayground">Python Playground</a></li>
+<li><a href="https://pragprog.com/titles/bhwb/exercises-for-programmers/">Exercises for Programmers</a></li>
+</ul>
+<h3 id="hol-tudunk-utána-nézni-a-fenti-3-dolognak-a-feladatok-megoldasa-kozben">Hol tudunk utána nézni a fenti 3 dolognak, a feladatok megoldasa kozben?</h3>
+<p>A <a href="https://roadmap.sh/">Roadmaps</a> egy sokmindent átfogó térkép, itt át lehet nézni nagyjából mivel fogunk találkozni.</p>
+<h4 id="algoritmusok">Algoritmusok</h4>
+<p>Az algoritmusos tananyagok többsege 3 féle nézőpont közül, főleg az egyik szerint szokta bemutatni az algoritmusokat.</p>
+<p><strong>Matematikai nézőpont:</strong> Ezeknek a fő témája az hogy, az egyes algoritmusoknak a futási ideje, miként valtozik a bemeneti adatok méretének a valtozásával arányosan. És az elemzesi módszerek, amikkel magunk is kitalálhatjuk ezeket az információkat a sajat algoritmusainkról. pl.: <a href="https://www.amazon.com/Introduction-Analysis-Algorithms-2nd/dp/032190575X">Introduction to the Analysis of Algorithms</a></p>
+<p><strong>Gyakorlati nézőpont:</strong> Ezek valós(szeru) feladatokon keresztül mutatják be az algoritmusokat es a hangsúly az algoritmusok megvalósításán (kódolásán) van. pl.: <a href="https://nostarch.com/algorithmic-thinking">Algorithmic Thinking</a></p>
+<p><strong>Intuitív nézőpont:</strong> Ezek az egyes algoritmusok legfontosabb máködési elveire koncentrálnak, leegyszerűsitett példakon keresztül pl.: <a href="https://www.amazon.com/Learning-Algorithms-Programmers-Writing-Better/dp/1492091065/ref=sr_1_1">Learning Algorithms</a></p>
+<p>Az <a href="https://algs4.cs.princeton.edu/home/">Algorithms</a> az egyik legjobb es legrészletesebb.</p>
+<p>Vannak persze átfedesek es minden könyv egyedi. Ennek a csoportosításának az a célja hogy könnyebben megtaláljuk amit keresünk. Peldaul: ha a binaris keresőfákat akarjuk megtanulni, akkor valamelyik intuitív típusú könyvben megnézzuk az alap ötletet. Utána egy gyakorlati könyvben meg tudjuk nézni, hogy lehet lekódolni, a matematikai könyv alapjan pedig részletesen latni fogjuk a teljesitményet es a bizonyitast arról hogy nem vertek at a másik két könyvben.</p>
+<h4 id="környezet">Környezet</h4>
+<p>A környezethez kapcsolódó informáciok nagyreszt a kiválasztott programnyelvek, könyvtárak, operációs rendszer, eszközök dokumentációjában lesz.</p>
+<h4 id="programkód">Programkód</h4>
+<p>A programkód íráshoz 2 féle tananyagra lesz szükségünk.</p>
+<p><strong>Programozást oktató anyagok:</strong> Ezek magát a programozást tanítjak az adott programnyelv segitségevel.</p>
+<p><strong>Referencia típusú leirasok:</strong> Ezek feltételezik hogy ért az olvasó a programozáshoz, egyszerűen felsoroljak nyelv szabályait, a használhato függvényeket es modulokat különosebb magyarázat nélkul. A programnyelvek hivatalos dokumentációja a legfontosabb ilyen. Ha egy beepitett függvényről, vagy szintaxisról nem tudjuk hogy pontosan mire jó, itt találjuk meg.</p>
+<h3 id="a-közönség-segítségét-kérném">&ldquo;A közönség segítségét kérném&rdquo;</h3>
+<ul>
+<li><a href="https://www.quora.com/">Quora</a></li>
+<li><a href="https://stackoverflow.com/">Stackoverflow</a></li>
+<li>Facebook csoportok</li>
+</ul>
+<h2 id="folytatás">Folytatás</h2>
+<p>A következő rész a backend fejlesztésrol, a hozzá tartozó algoritmusokról és a Go programnyelvről fog szólni.</p>
+
+
+        
+
+        
+            <hr/>
+            <section id="social-share">
+              <div class="list-inline footer-links">
+                
+
+<div class="share-box" aria-hidden="true">
+    <ul class="share">
+      
+      <li>
+        <a href="//twitter.com/share?url=https%3a%2f%2fcmldev2.github.io%2fposts%2ffullstack-onalloan%2f&amp;text=Full%20stack%20fejleszt%c5%91%20%c3%b6n%c3%a1ll%c3%b3an%2c%20kezd%c5%91knek&amp;via=" target="_blank" title="Share on Twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcmldev2.github.io%2fposts%2ffullstack-onalloan%2f" target="_blank" title="Share on Facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//reddit.com/submit?url=https%3a%2f%2fcmldev2.github.io%2fposts%2ffullstack-onalloan%2f&amp;title=Full%20stack%20fejleszt%c5%91%20%c3%b6n%c3%a1ll%c3%b3an%2c%20kezd%c5%91knek" target="_blank" title="Share on Reddit">
+          <i class="fab fa-reddit"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fcmldev2.github.io%2fposts%2ffullstack-onalloan%2f&amp;title=Full%20stack%20fejleszt%c5%91%20%c3%b6n%c3%a1ll%c3%b3an%2c%20kezd%c5%91knek" target="_blank" title="Share on LinkedIn">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.stumbleupon.com/submit?url=https%3a%2f%2fcmldev2.github.io%2fposts%2ffullstack-onalloan%2f&amp;title=Full%20stack%20fejleszt%c5%91%20%c3%b6n%c3%a1ll%c3%b3an%2c%20kezd%c5%91knek" target="_blank" title="Share on StumbleUpon">
+          <i class="fab fa-stumbleupon"></i>
+        </a>
+      </li>
+  
+      
+      <li>
+        <a href="//www.pinterest.com/pin/create/button/?url=https%3a%2f%2fcmldev2.github.io%2fposts%2ffullstack-onalloan%2f&amp;description=Full%20stack%20fejleszt%c5%91%20%c3%b6n%c3%a1ll%c3%b3an%2c%20kezd%c5%91knek" target="_blank" title="Share on Pinterest">
+          <i class="fab fa-pinterest"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+
+              </div>
+            </section>
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.101.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="https://cmldev2.github.io/js/main.js"></script>
+<script src="https://cmldev2.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="https://cmldev2.github.io/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
