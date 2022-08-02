@@ -5,7 +5,16 @@
     <link>https://cmldev2.github.io/</link>
     <description>Recent content on Programozás tanulás</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 30 Jul 2022 19:40:07 +0200</lastBuildDate><atom:link href="https://cmldev2.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Aug 2022 19:40:07 +0200</lastBuildDate><atom:link href="https://cmldev2.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programozás Go nyelven</title>
+      <link>https://cmldev2.github.io/posts/programozas-go-nyelven/</link>
+      <pubDate>Mon, 01 Aug 2022 19:40:07 +0200</pubDate>
+      
+      <guid>https://cmldev2.github.io/posts/programozas-go-nyelven/</guid>
+      <description>Draft Go bemutatasa (modern, google, mire valo) Kod futtatas Programozas leirasa Memoria kezeles / valtozok 11 szerepe (Sajaniemi’s 11 roles) 199 200 201 func main() { fmt.Println(&amp;#34;hello&amp;#34;) } asdf alma </description>
+    </item>
+    
     <item>
       <title>Full stack fejlesztő önállóan, kezdőknek</title>
       <link>https://cmldev2.github.io/posts/fullstack-onalloan/</link>
