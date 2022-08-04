@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="hu" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Full stack fejlesztő önállóan, kezdőknek - Programozás tanulás cikkek</title>
+  <meta name="description" content="Mi az a full stack fejlesztés? A full stack fejlesztők olyan fejlesztők akik atlátják a webes rendszerek minden részletét. Ebben a cikk sorozatban azt mutatom be:
+(1. resz) Milyen részei vannak a webes rendszereknek? (1. resz) Milyen tudás kell ezeknek a fejlesztéséhez? (1. resz) Hogyan lehet megtanulni? (2. resz) Backend fejlesztés Go nyelven (3. resz) Frontend fejlesztés (html, css, js) Webes rendszerek felépítése Frontend: program ami a böngészőben fut (általában JavaScript).">
+  <meta name="author" content="Milan"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Programozás tanulás cikkek",
+    
+    "url": "https:\/\/cmldev2.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/cmldev2.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/cmldev2.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/cmldev2.github.io\/posts\/fullstack-onalloan\/",
+          "name": "Full stack fejlesztő önállóan, kezdőknek"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Milan"
+  },
+  "headline": "Full stack fejlesztő önállóan, kezdőknek",
+  "description" : "Mi az a full stack fejlesztés? A full stack fejlesztők olyan fejlesztők akik atlátják a webes rendszerek minden részletét. Ebben a cikk sorozatban azt mutatom be:\n(1. resz) Milyen részei vannak a webes rendszereknek? (1. resz) Milyen tudás kell ezeknek a fejlesztéséhez? (1. resz) Hogyan lehet megtanulni? (2. resz) Backend fejlesztés Go nyelven (3. resz) Frontend fejlesztés (html, css, js) Webes rendszerek felépítése Frontend: program ami a böngészőben fut (általában JavaScript).",
+  "inLanguage" : "hu",
+  "wordCount":  936 ,
+  "datePublished" : "2022-07-30T19:40:07",
+  "dateModified" : "2022-07-30T19:40:07",
+  "image" : "https:\/\/cmldev2.github.io\/img\/logo.svg",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/cmldev2.github.io\/posts\/fullstack-onalloan\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/cmldev2.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/cmldev2.github.io\/img\/logo.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Full stack fejlesztő önállóan, kezdőknek" />
+<meta property="og:description" content="Mi az a full stack fejlesztés? A full stack fejlesztők olyan fejlesztők akik atlátják a webes rendszerek minden részletét. Ebben a cikk sorozatban azt mutatom be:
+(1. resz) Milyen részei vannak a webes rendszereknek? (1. resz) Milyen tudás kell ezeknek a fejlesztéséhez? (1. resz) Hogyan lehet megtanulni? (2. resz) Backend fejlesztés Go nyelven (3. resz) Frontend fejlesztés (html, css, js) Webes rendszerek felépítése Frontend: program ami a böngészőben fut (általában JavaScript).">
+<meta property="og:image" content="https://cmldev2.github.io/img/logo.svg" />
+<meta property="og:url" content="https://cmldev2.github.io/posts/fullstack-onalloan/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Programozás tanulás cikkek" />
+
+  <meta name="twitter:title" content="Full stack fejlesztő önállóan, kezdőknek" />
+  <meta name="twitter:description" content="Mi az a full stack fejlesztés? A full stack fejlesztők olyan fejlesztők akik atlátják a webes rendszerek minden részletét. Ebben a cikk sorozatban azt mutatom be:
+(1. resz) Milyen részei vannak a …">
+  <meta name="twitter:image" content="https://cmldev2.github.io/img/logo.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://cmldev2.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.101.0" />
+  <link rel="alternate" href="https://cmldev2.github.io/index.xml" type="application/rss+xml" title="Programozás tanulás cikkek">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cmldev2.github.io/css/chroma.css" />
+  <link rel="stylesheet" href="https://cmldev2.github.io/css/main.css" />
+
+  </head>
+  <body class="antialiased bg-white font-sans">
+    <nav class="bg-white">
+  <div class="flex items-center shadow">
+    <div class="pl-4 py-4 mr-4 flex-none">
+      <a class="font-bold block" href="https://cmldev2.github.io/"><img class="" src="https://cmldev2.github.io/img/logo.svg" alt="Programozás tanulás cikkek" /></a>
+    </div>
+
+    <div class="flex-1">
+      <ul class="flex justify-end mx-4">
+        
+            <li>
+              <a title="Posts" href="/posts/">Posts</a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+  
+  
+  
+
+
+
+
+
+
+  
+
+  
+    <div>
+      <div class="text-center mb-8 mt-4">
+        
+          <h1 class="text-3xl font-bold text-center">Full stack fejlesztő önállóan, kezdőknek</h1>
+        
+
+        
+        
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="mx-auto max-w-2xl px-4">
+  <article role="main" class="blog-post">
+    <h2 id="mi-az-a-full-stack-fejlesztés">Mi az a full stack fejlesztés?</h2>
+<p>A full stack fejlesztők olyan fejlesztők akik atlátják a webes rendszerek minden részletét.
+Ebben a cikk sorozatban azt mutatom be:</p>
+<ul>
+<li>(1. resz) Milyen részei vannak a webes rendszereknek?</li>
+<li>(1. resz) Milyen tudás kell ezeknek a fejlesztéséhez?</li>
+<li>(1. resz) Hogyan lehet megtanulni?</li>
+<li>(2. resz) Backend fejlesztés Go nyelven</li>
+<li>(3. resz) Frontend fejlesztés (html, css, js)</li>
+</ul>
+<h2 id="webes-rendszerek-felépítése">Webes rendszerek felépítése</h2>
+<p><img src="/posts/fullstack-onalloan/webes_rendszer_reszei.png" alt="Webes rendszer reszei"></p>
+<p><strong>Frontend:</strong> program ami a böngészőben fut (általában JavaScript). Az a feladata hogy megjelenítse a felhasználói felületet (HTML, CSS), kezelje felhasználó interakcióit (kattintás, szövegbevitel, kép / hangbevitel, stb), hálózaton továbbítsa az adatokat a backendnek és a backend által visszaküldött informáciokat megjelenítse.</p>
+<p><strong>Backend:</strong> program ami a szervereken fut, figyeli a hálózaton bejövő kéréseket a frontendtől, feldolgozza és visszaküldi az eredményt.</p>
+<p>Ahhoz hogy akár böngészőben, akár szerveren futó programot tudjunk írni, először a programozás alapjait kell megtanulnunk!</p>
+<h2 id="hogyan-tanuljunk-meg-programozni">Hogyan tanuljunk meg programozni?</h2>
+<h3 id="egyesek-és-nullák">Egyesek és nullák</h3>
+<p>A programozás tanulása általában azzal kezdődik hogy a megtudjuk: &ldquo;A számítógép csak egyeseket és nullákat ismer&rdquo;, ami elsőre elég hihetetlen, mert ennél már Frédi és Béni kő-tabletjei is többet tudtak.</p>
+<p>Valójában a számítógép nagyrészt félvezető eszközökből áll, aminek 3 csatlakozási pontja van, és az a legfontosabb tuljadonsága hogy ha 2 pontja között megfelelő a feszültség, akkor a masik 2 pontja között enged áramot folyni, különben nem enged. Erre a trükkre épülnek a digitalis számítógepek.</p>
+<p>Hogy hogyan lesz számítógép az egyszerű félvezető eszközökből azt a digitalis elektronika és számítógép architektúra anyagok tárgyalják részletesen:</p>
+<ul>
+<li><a href="https://nostarch.com/how-computers-really-work">How Computers Really Work</a></li>
+<li><a href="https://nostarch.com/dive-systems">Dive Into Systems</a></li>
+<li><a href="https://nostarch.com/introcomporg">Introduction to Computer Organization</a></li>
+</ul>
+<p>Webfejlesztőkent, a digitális elektronika tudásra kezdetben nem lesz szükségünk és nem érdemes túl részletesen foglalkozni vele. Akkor lesz igazán érdekes ha már jobban tudunk programozni és szeretnénk gyors, hatékony programokat írni, mélyebben megérteni mi törtenik a gépben.</p>
+<p>A modern programnyelvekben ez a szint jól el van rejtve, viszont érdemes hosszú távon minél jobban megérteni, mert ez magyarázza meg miért úgy kell programozni a gépeket ahogy, mik a képességei és a korlátai ezeknek a rendszereknek.</p>
+<h3 id="miből-áll-a-programozói-tudás">Miből áll a programozói tudás?</h3>
+<p><img src="/posts/fullstack-onalloan/programozas_tudas.png" alt="Programozói tudás"></p>
+<p>Egy programozási feladat megoldásához 3 dolog kell (ezeket kell megtanulni):</p>
+<ol>
+<li><strong>Környezet:</strong> Megismerni milyen műveleteket tud a rendszerünk végrehajtani</li>
+<li><strong>Algoritmusok:</strong> Kitalálni egy olyan művelet sorozatot amivel ami megoldja a feladatot</li>
+<li>Megírni a <strong>programkód</strong>ot (és kipróbálni)</li>
+</ol>
+<p>Szinte mindig felbontjuk a feladatot, sok kisebb részfeladatra, megoldjuk a részfeladatokat, összeillesztjük a részeket és ezt napi sok százszor ismételjük.</p>
+<h3 id="hogy-kezdjük-el">Hogy kezdjük el?</h3>
+<p>A fenti 3 téma, mindegyike egyenként is hatalmas, és mindegyikkel több különböző tudomanyag is foglalkozik.
+Példaul ha csak az algoritmusokat nézzuk, egy átlagos bevezető könyv 1000+ oldalas, kb 30 fejezetből áll és mindegyik fejezet témájához gyorsan találnank újabb 1000+ oldalas könyveket. Az elejétől a végeig, ezt mind megtanulni, kihívást jelentő vállalkozás lenne. Szerencsére nincs ra szükség.</p>
+<p>Manapság minden tananyag ingyen vagy olcsón elérhető, minden témaban, mindenféle szempontból.
+Viszont általában nincs egy olyan tananyag, ami a nekünk megfelelő szintről indul, eljut oda ahova szeretnénk és olyan részletességgel halad hogy követni tudjuk de nincs tele, számunkra felesleges informaciokkal.</p>
+<p>Ezért ha önalloan tanulunk, akkor a saját felelősségünk, a sajat tanulasi folyamatunk kézben tartása. Ez önmagaban is egy fontos képesseg, ebben a szakmában, minden nap szükség van rá.
+Az önalló tanulásról az <a href="https://www.scotthyoung.com/blog/ultralearning/">Ultralearning</a> blogon és könyvben találunk részletes leírást.</p>
+<p>A programozás megtanulásához egy jó strategia, ha gyakorló feladatokon keresztül tanulunk. Minden egyes feladatnál utána tudunk nézni, a fenti 3 téma azon részeinek, amik relevánsak a feladathoz. A feladatokat a sikeres megoldás után, mindig nehezítjük és ezt ismételjük sokszor. Így, mire végzünk, meg lesz minden szükséges tudásunk a munkához.</p>
+<p>Akinek van ra lehetősége, érdemes egy mentort is keresni, aki tud segíteni és visszajelzést adni.</p>
+<p>Válasszunk egy programnyelvet és kezdjük el a feladatokat megoldani! Első programnyelvnek a Python az egyik legjobb lehetőség, mert egyszerű és nagyon sok jó minősegű tananyag elerhető hozzá, de bármelyik megteszi.</p>
+<h3 id="gyakorló-feladatok-a-programozás-alapjaihoz-python-nyelven">Gyakorló feladatok a programozás alapjaihoz (Python nyelven)</h3>
+<ul>
+<li><a href="https://nostarch.com/learn-code-solving-problems">Learn to Code by Solving Problems</a></li>
+<li><a href="https://nostarch.com/Learn-Python-Visually">Learn Python Visually</a></li>
+<li><a href="https://nostarch.com/inventwithpython">Invent Your Own Computer Games with Python, 4th Edition</a></li>
+<li><a href="https://nostarch.com/pythonplayground">Python Playground</a></li>
+<li><a href="https://pragprog.com/titles/bhwb/exercises-for-programmers/">Exercises for Programmers</a></li>
+</ul>
+<h3 id="hol-tudunk-utána-nézni-a-fenti-3-dolognak-a-feladatok-megoldása-közben">Hol tudunk utána nézni a fenti 3 dolognak, a feladatok megoldása közben?</h3>
+<p>A <a href="https://roadmap.sh/">Roadmaps</a> egy sokmindent átfogó térkép, itt át lehet nézni nagyjából mivel fogunk találkozni.</p>
+<h4 id="algoritmusok">Algoritmusok</h4>
+<p>Az algoritmusos tananyagok többsége 3 féle nézőpont közül, főleg az egyik szerint szokta bemutatni az algoritmusokat.</p>
+<p><strong>Matematikai nézőpont:</strong> Ezeknek a fő témája az hogy, az egyes algoritmusoknak a futási ideje, miként valtozik a bemeneti adatok méretének valtozásával arányosan. És az elemzesi módszerek, amikkel magunk is kitalálhatjuk ezeket az információkat a sajat algoritmusainkról. pl.: <a href="https://www.amazon.com/Introduction-Analysis-Algorithms-2nd/dp/032190575X">Introduction to the Analysis of Algorithms</a></p>
+<p><strong>Gyakorlati nézőpont:</strong> Ezek valós(szerű) feladatokon keresztül mutatják be az algoritmusokat és a hangsúly az algoritmusok megvalósításán (kódolásán) van. pl.: <a href="https://nostarch.com/algorithmic-thinking">Algorithmic Thinking</a></p>
+<p><strong>Intuitív nézőpont:</strong> Ezek az egyes algoritmusok legfontosabb működési elveire koncentrálnak, leegyszerűsitett példákon keresztül pl.: <a href="https://www.amazon.com/Learning-Algorithms-Programmers-Writing-Better/dp/1492091065/ref=sr_1_1">Learning Algorithms</a></p>
+<p>Az <a href="https://algs4.cs.princeton.edu/home/">Algorithms</a> az egyik legjobb és legrészletesebb.</p>
+<p>Vannak persze átfedesek és minden könyv egyedi. Ennek a csoportosításának az a célja hogy könnyebben megtaláljuk amit keresünk. Peldaul: ha a bináris keresőfákat akarjuk megtanulni, akkor valamelyik intuitív típusú könyvben megnézzuk az alap ötletet. Utána egy gyakorlati könyvben meg tudjuk nézni, hogy lehet lekódolni, a matematikai könyv alapjan pedig részletesen latni fogjuk a teljesitményet és a bizonyitást arról hogy nem vertek át a másik két könyvben.</p>
+<h4 id="környezet">Környezet</h4>
+<p>A környezethez kapcsolódó információk nagyrészt a kiválasztott programnyelvek, könyvtárak, operációs rendszer, eszközök dokumentációjában lesz.</p>
+<h4 id="programkód">Programkód</h4>
+<p>A programkód íráshoz 2 féle tananyagra lesz szükségünk.</p>
+<p><strong>Programozást oktató anyagok:</strong> Ezek magát a programozást tanítják az adott programnyelv segitségevel.</p>
+<p><strong>Referencia típusú leirasok:</strong> Ezek feltételezik hogy ért az olvasó a programozáshoz, egyszerűen felsorolják nyelv szabályait, a használhato függvényeket és modulokat, különosebb magyarázat nélkül. A programnyelvek hivatalos dokumentációja a legfontosabb ilyen. Ha egy beépitett függvényről, vagy szintaxisról nem tudjuk hogy pontosan mire jó, itt találjuk meg.</p>
+<h2 id="folytatás">Folytatás</h2>
+<p>A következő rész a backend fejlesztésrol, a hozzá tartozó algoritmusokról és a Go programnyelvről fog szólni.</p>
+
+
+    
+
+    
+
+    
+      
+
+      
+    
+  </article>
+
+  
+    <ul class="flex justify-center my-4">
+      
+      
+    </ul>
+  
+
+
+  
+
+</div>
+
+      
+<footer>
+  <div class="max-w-2xl mx-auto text-xs text-center my-8 text-gray-400">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.101.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
