@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="hu" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Frontend fejlesztés alapjai - Programozás tanulás cikkek</title>
+  <meta name="description" content="(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok (6. resz) Frontend fejlesztés alapjai Mi a frontend? Program ami a böngészőben fut (JavaScript vagy WebAssembly). Az a feladata hogy megjelenítse a felhasználói felületet (HTML, CSS), kezelje felhasználó interakcióit (kattintás, szövegbevitel, kép / hangbevitel, stb), hálózaton továbbítsa az adatokat a backendnek és a backend által visszaküldött informáciokat megjelenítse.">
+  <meta name="author" content="Milan"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Programozás tanulás cikkek",
+    
+    "url": "https:\/\/cmldev2.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/cmldev2.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/cmldev2.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/cmldev2.github.io\/posts\/frontend-fejlesztes-alapjai\/",
+          "name": "Frontend fejlesztés alapjai"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Milan"
+  },
+  "headline": "Frontend fejlesztés alapjai",
+  "description" : "(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok (6. resz) Frontend fejlesztés alapjai Mi a frontend? Program ami a böngészőben fut (JavaScript vagy WebAssembly). Az a feladata hogy megjelenítse a felhasználói felületet (HTML, CSS), kezelje felhasználó interakcióit (kattintás, szövegbevitel, kép \/ hangbevitel, stb), hálózaton továbbítsa az adatokat a backendnek és a backend által visszaküldött informáciokat megjelenítse.",
+  "inLanguage" : "hu",
+  "wordCount":  531 ,
+  "datePublished" : "2022-08-04T19:40:07",
+  "dateModified" : "2022-08-04T19:40:07",
+  "image" : "https:\/\/cmldev2.github.io\/img\/logo.svg",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/cmldev2.github.io\/posts\/frontend-fejlesztes-alapjai\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/cmldev2.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/cmldev2.github.io\/img\/logo.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Frontend fejlesztés alapjai" />
+<meta property="og:description" content="(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok (6. resz) Frontend fejlesztés alapjai Mi a frontend? Program ami a böngészőben fut (JavaScript vagy WebAssembly). Az a feladata hogy megjelenítse a felhasználói felületet (HTML, CSS), kezelje felhasználó interakcióit (kattintás, szövegbevitel, kép / hangbevitel, stb), hálózaton továbbítsa az adatokat a backendnek és a backend által visszaküldött informáciokat megjelenítse.">
+<meta property="og:image" content="https://cmldev2.github.io/img/logo.svg" />
+<meta property="og:url" content="https://cmldev2.github.io/posts/frontend-fejlesztes-alapjai/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Programozás tanulás cikkek" />
+
+  <meta name="twitter:title" content="Frontend fejlesztés alapjai" />
+  <meta name="twitter:description" content="(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) …">
+  <meta name="twitter:image" content="https://cmldev2.github.io/img/logo.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://cmldev2.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.101.0" />
+  <link rel="alternate" href="https://cmldev2.github.io/index.xml" type="application/rss+xml" title="Programozás tanulás cikkek">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cmldev2.github.io/css/chroma.css" />
+  <link rel="stylesheet" href="https://cmldev2.github.io/css/main.css" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C9CMG2Q8J7"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-C9CMG2Q8J7', { 'anonymize_ip': false });
+}
+</script>
+
+  </head>
+  <body class="antialiased bg-white font-sans">
+    <nav class="bg-white">
+  <div class="flex items-center shadow">
+    <div class="pl-4 py-4 mr-4 flex-none">
+      <a class="font-bold block" href="https://cmldev2.github.io/"><img class="" src="https://cmldev2.github.io/img/logo.svg" alt="Programozás tanulás cikkek" /></a>
+    </div>
+
+    <div class="flex-1">
+      <ul class="flex justify-end mx-4">
+        
+            <li>
+              <a title="Posts" href="/posts/">Posts</a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+  
+  
+  
+
+
+
+
+
+
+  
+
+  
+    <div>
+      <div class="text-center mb-8 mt-4">
+        
+          <h1 class="text-3xl font-bold text-center">Frontend fejlesztés alapjai</h1>
+        
+
+        
+        
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="mx-auto max-w-2xl px-4">
+  <article role="main" class="blog-post">
+    <ul>
+<li><a href="/posts/fullstack-onalloan/">(1. resz) Full stack fejlesztő önállóan, kezdőknek</a></li>
+<li><a href="/posts/programozas-go-nyelven/">(2. resz) Programozás alapjai Go nyelven</a></li>
+<li>(3. resz) Hálózat programozás alapjai Go nyelven</li>
+<li>(4. resz) Backend fejlesztés Go nyelven</li>
+<li>(5. resz) Adatbázisok</li>
+<li><a href="/posts/frontend-fejlesztes-alapjai">(6. resz) Frontend fejlesztés alapjai</a></li>
+</ul>
+<h2 id="mi-a-frontend">Mi a frontend?</h2>
+<p>Program ami a böngészőben fut (JavaScript vagy WebAssembly). Az a feladata hogy megjelenítse a felhasználói felületet (HTML, CSS), kezelje felhasználó interakcióit (kattintás, szövegbevitel, kép / hangbevitel, stb), hálózaton továbbítsa az adatokat a backendnek és a backend által visszaküldött informáciokat megjelenítse.</p>
+<h3 id="html">HTML</h3>
+<p>A html kód írja le az oldal struktúráját és a tartalmát. A részletes dokumentációja <a href="https://developer.mozilla.org/en-US/docs/Web/HTML">itt</a> található.
+Példa html kód:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;hu&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Document<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Cím<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Ez egy bekezdésnyi szöveg<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;teszt.jpg&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>A html kód <strong>tag</strong>ekből áll. Egy tag így néz ki:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">tagnév</span> <span class="na">attribútum</span><span class="o">=</span><span class="s">&#34;..&#34;</span> <span class="na">attribútum</span><span class="o">=</span><span class="s">&#34;..&#34;</span><span class="p">&gt;</span> ... <span class="p">&lt;/</span><span class="nt">tagnév</span><span class="p">&gt;</span>
+</span></span></code></pre></div><p>Vagy rövidebb formában, ha nem tartalmaz más tageket:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">tagnév</span> <span class="na">attribútum</span><span class="o">=</span><span class="s">&#34;..&#34;</span> <span class="na">attribútum</span><span class="o">=</span><span class="s">&#34;..&#34;</span> <span class="p">/&gt;</span>
+</span></span></code></pre></div><p>A <strong>tagnév</strong> leírja hogy milyen elemről van szó, pl.:</p>
+<ul>
+<li>h1: első szintű címsor</li>
+<li>p: bekezdés</li>
+<li>a: hivatkozás</li>
+<li>img: kép</li>
+</ul>
+<p>A tageket mindig le kell zárni a &lt;/tagnév&gt;-el vagy a  /&gt; -el.</p>
+<p>A tagek tartalmazhatnak attribútumokat, amik <strong>attribútum=&ldquo;érték&rdquo;</strong> formában vannak megadva. Ezekkel az adott tag működését lehet módosítani, vagy paramétereket megadni. Pl.: az <strong>img</strong> tag-nek be kell állítanunk egy <strong>src</strong> attribútumot, ami a kép elérési útja.
+Az egész oldal ilyek tagekből van felépítve.</p>
+<h3 id="css">CSS</h3>
+<p>A css a html elemek kinézetét íjra le, pl háttérszín, szélesség, magasság. A css részletes dokumentációja <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">itt</a> található.</p>
+<p>Példa, a bekezdsék hattárszínének a megváltoztatására:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">p</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="kc">red</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>A css szabályok általánosságban így néznek ki:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">szelektor</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tulajdonsag</span><span class="p">:</span> <span class="n">ertek</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="n">tulajdonsag</span><span class="p">:</span> <span class="n">ertek</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><ul>
+<li><strong>Szelektor:</strong> Leírja hogy mire vonatkozik az adott szabály. <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">Részletes dokumentáció</a></li>
+<li><strong>Tulajdonság:</strong> Leírja hogy a html elem melyik tulajdonságának a kinézetét akarjuk megváltoztatni. Pl.: szín, méret, stb  <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#anatomy_of_a_css_ruleset">Részletes dokumentáció</a></li>
+<li><strong>Érték:</strong> Leírja hogy az adott tulajdonság hogy jelenjen meg Pl.: a keret tulajdonsghoz értékként meg tudjuk adni hogy piros színű legyen.</li>
+</ul>
+<h3 id="javascript">JavaScript</h3>
+<p>A JavaScript egy programnyelv, leggyakrabban ezt használjuk a böngészőben. A html és a css kóddal együtt betölti a böngésző és elindítja. A részletes dokumentációja <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">itt</a> található.
+A JS-t nagyon sok dologra használhatjuk:</p>
+<ul>
+<li>HTML elemek létrehozása, módosítása</li>
+<li>HTML elemek kinézetének a beállítása</li>
+<li>A böngésző különböző képességeit ezen keresztül használhatjuk, <a href="https://developer.mozilla.org/en-US/docs/Web/API">itt</a> a részletes lista</li>
+</ul>
+<h2 id="a-frontend-program-futtatása">A frontend program futtatása</h2>
+<p>Amikor beírunk egy url-t a böngészőbe, a böngésző letölti a html kódot. Abban benne vannak a hivatkozások a js és a css kódokra, azok alapján letöltődik a többi kód is.
+Ezután a böngésző elkezdi feldolgozni a kódokat, a következő lépésekben:</p>
+<h3 id="1-dom-document-object-model-létrehozása">1. DOM (Document Object Model) létrehozása</h3>
+<p>A DOM a böngészők belső adatszerkezete az oldal reprezentálására. A böngésző beolvassa a html kódot, értelmezi és ebből előállítja a DOM-ot.
+Ezen keresztül lehet JavaScrittel módosítani az oldal szerkezetét, tartalmát.</p>
+<h3 id="2-dom-elemek-kinézetének-a-kiszámolása">2. DOM elemek kinézetének a kiszámolása</h3>
+<p>Miután létrejött a DOM, a böngésző minden elemhez (ami megjelenhet) megkeresi a hozzá tartozó css szabályokat (css szelektorok alapján). Több szabály is vonatozhat egy elemre, ezeket a böngésző összefésüli és az így kiszámított tulajdonságokkal megjeleníti a képernyőn az elemeket.</p>
+<h3 id="3-renderelés">3. Renderelés</h3>
+<p>Kirajzolja a képernyőre weblapnak azokat a részeit aminek látszania kell.</p>
+<h3 id="4-események-figyelése">4. Események figyelése</h3>
+<p>Esemény sokféle lehet pl.: kattintás, időzítő lejár, stb. Amikor érzékeli a böngésző hogy valami történt, lefuttatja a hozzá tartozó JS kodót (ha van ilyen beállítva), ami utána tudja módosítani a DOM-ot.</p>
+
+
+    
+
+    
+
+    
+      
+
+      
+    
+  </article>
+
+  
+    <ul class="flex justify-center my-4">
+      
+        <li class="bg-black text-white black rounded-full font-bold px-4 py-2">
+          <a href="https://cmldev2.github.io/posts/programozas-go-nyelven/" data-toggle="tooltip" data-placement="top" title="Programozás alapjai Go nyelven">&larr; Previous Post</a>
+        </li>
+      
+      
+    </ul>
+  
+
+
+  
+
+</div>
+
+      
+<footer>
+  <div class="max-w-2xl mx-auto text-xs text-center my-8 text-gray-400">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.101.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
