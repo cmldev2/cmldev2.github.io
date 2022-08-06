@@ -7,12 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 04 Aug 2022 19:40:07 +0200</lastBuildDate><atom:link href="https://cmldev2.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Adatbázisok: hogy működnek, hogy válasszunk?</title>
+      <link>https://cmldev2.github.io/posts/adatbazisok/</link>
+      <pubDate>Thu, 04 Aug 2022 19:40:07 +0200</pubDate>
+      
+      <guid>https://cmldev2.github.io/posts/adatbazisok/</guid>
+      <description>(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok: hogy működnek, hogy válasszunk? (6. resz) Frontend fejlesztés alapjai Az adatbázisok elsődleges feladata hogy megbízhatóan tárolja az adatokat és kereshetővé tegye. Nagyon sok féle adatbázis van, fontos hogy mindig a feladathoz megfelelőt válasszuk. A modern webes rendszerek általában több adatbázist is használnak párhuzamosan, akár ugyanazon adatok tárolására.</description>
+    </item>
+    
+    <item>
       <title>Frontend fejlesztés alapjai</title>
       <link>https://cmldev2.github.io/posts/frontend-fejlesztes-alapjai/</link>
       <pubDate>Thu, 04 Aug 2022 19:40:07 +0200</pubDate>
       
       <guid>https://cmldev2.github.io/posts/frontend-fejlesztes-alapjai/</guid>
-      <description>(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok (6. resz) Frontend fejlesztés alapjai Mi a frontend? Program ami a böngészőben fut (JavaScript vagy WebAssembly). Az a feladata hogy megjelenítse a felhasználói felületet (HTML, CSS), kezelje felhasználó interakcióit (kattintás, szövegbevitel, kép / hangbevitel, stb), hálózaton továbbítsa az adatokat a backendnek és a backend által visszaküldött informáciokat megjelenítse.</description>
+      <description>(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok: hogy működnek, hogy válasszunk? (6. resz) Frontend fejlesztés alapjai Mi a frontend? Program ami a böngészőben fut (JavaScript vagy WebAssembly). Az a feladata hogy megjelenítse a felhasználói felületet (HTML, CSS), kezelje felhasználó interakcióit (kattintás, szövegbevitel, kép / hangbevitel, stb), hálózaton továbbítsa az adatokat a backendnek és a backend által visszaküldött informáciokat megjelenítse.</description>
     </item>
     
     <item>
@@ -21,8 +30,8 @@
       <pubDate>Mon, 01 Aug 2022 19:40:07 +0200</pubDate>
       
       <guid>https://cmldev2.github.io/posts/programozas-go-nyelven/</guid>
-      <description>(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok (6. resz) Frontend fejlesztés alapjai Ebben a cikkben a progromozás alapjait fogjuk átnézéni, egyszerű példákon keresztül.
-Mi a program? A program egy olyan utasítássorozat amit a számítógép végre tud hajtani. A számítógépnek két része van, ami most fontos nekünk. A processzor (CPU) és a memória (RAM).</description>
+      <description>(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok: hogy működnek, hogy válasszunk? (6. resz) Frontend fejlesztés alapjai Ebben a cikkben a progromozás alapjait fogjuk átnézéni, egyszerű példákon keresztül.
+Mi a program? A program egy olyan utasítássorozat amit a számítógép végre tud hajtani. A számítógépnek két része van, ami most fontos nekünk.</description>
     </item>
     
     <item>
@@ -32,7 +41,7 @@ Mi a program? A program egy olyan utasítássorozat amit a számítógép végre
       
       <guid>https://cmldev2.github.io/posts/fullstack-onalloan/</guid>
       <description>Mi az a full stack fejlesztés? A full stack fejlesztők olyan fejlesztők akik atlátják a webes rendszerek minden részletét. Milyen részei vannak a webes rendszereknek? Milyen tudás kell ezeknek a fejlesztéséhez? Hogyan lehet megtanulni? Ebben a cikk sorozatban azt mutatom be:
-(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok (6.</description>
+(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok: hogy működnek, hogy válasszunk?</description>
     </item>
     
   </channel>

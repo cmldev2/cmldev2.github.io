@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="hu" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Adatbázisok: hogy működnek, hogy válasszunk? - Programozás tanulás cikkek</title>
+  <meta name="description" content="(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok: hogy működnek, hogy válasszunk? (6. resz) Frontend fejlesztés alapjai Az adatbázisok elsődleges feladata hogy megbízhatóan tárolja az adatokat és kereshetővé tegye. Nagyon sok féle adatbázis van, fontos hogy mindig a feladathoz megfelelőt válasszuk. A modern webes rendszerek általában több adatbázist is használnak párhuzamosan, akár ugyanazon adatok tárolására.">
+  <meta name="author" content="Milan"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Programozás tanulás cikkek",
+    
+    "url": "https:\/\/cmldev2.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/cmldev2.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/cmldev2.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/cmldev2.github.io\/posts\/adatbazisok\/",
+          "name": "Adatbázisok hogy működnek, hogy válasszunk?"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Milan"
+  },
+  "headline": "Adatbázisok: hogy működnek, hogy válasszunk?",
+  "description" : "(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok: hogy működnek, hogy válasszunk? (6. resz) Frontend fejlesztés alapjai Az adatbázisok elsődleges feladata hogy megbízhatóan tárolja az adatokat és kereshetővé tegye. Nagyon sok féle adatbázis van, fontos hogy mindig a feladathoz megfelelőt válasszuk. A modern webes rendszerek általában több adatbázist is használnak párhuzamosan, akár ugyanazon adatok tárolására.",
+  "inLanguage" : "hu",
+  "wordCount":  1187 ,
+  "datePublished" : "2022-08-04T19:40:07",
+  "dateModified" : "2022-08-04T19:40:07",
+  "image" : "https:\/\/cmldev2.github.io\/img\/logo.svg",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/cmldev2.github.io\/posts\/adatbazisok\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/cmldev2.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/cmldev2.github.io\/img\/logo.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Adatbázisok: hogy működnek, hogy válasszunk?" />
+<meta property="og:description" content="(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) Adatbázisok: hogy működnek, hogy válasszunk? (6. resz) Frontend fejlesztés alapjai Az adatbázisok elsődleges feladata hogy megbízhatóan tárolja az adatokat és kereshetővé tegye. Nagyon sok féle adatbázis van, fontos hogy mindig a feladathoz megfelelőt válasszuk. A modern webes rendszerek általában több adatbázist is használnak párhuzamosan, akár ugyanazon adatok tárolására.">
+<meta property="og:image" content="https://cmldev2.github.io/img/logo.svg" />
+<meta property="og:url" content="https://cmldev2.github.io/posts/adatbazisok/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Programozás tanulás cikkek" />
+
+  <meta name="twitter:title" content="Adatbázisok: hogy működnek, hogy válasszunk?" />
+  <meta name="twitter:description" content="(1. resz) Full stack fejlesztő önállóan, kezdőknek (2. resz) Programozás alapjai Go nyelven (3. resz) Hálózat programozás alapjai Go nyelven (4. resz) Backend fejlesztés Go nyelven (5. resz) …">
+  <meta name="twitter:image" content="https://cmldev2.github.io/img/logo.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://cmldev2.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.101.0" />
+  <link rel="alternate" href="https://cmldev2.github.io/index.xml" type="application/rss+xml" title="Programozás tanulás cikkek">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cmldev2.github.io/css/chroma.css" />
+  <link rel="stylesheet" href="https://cmldev2.github.io/css/main.css" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C9CMG2Q8J7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C9CMG2Q8J7');
+</script>
+
+  </head>
+  <body class="antialiased bg-white font-sans">
+    <nav class="bg-white">
+  <div class="flex items-center shadow">
+    <div class="pl-4 py-4 mr-4 flex-none">
+      <a class="font-bold block" href="https://cmldev2.github.io/"><img class="" src="https://cmldev2.github.io/img/logo.svg" alt="Programozás tanulás cikkek" /></a>
+    </div>
+
+    <div class="flex-1">
+      <ul class="flex justify-end mx-4">
+        
+            <li>
+              <a title="Posts" href="/posts/">Posts</a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+  
+  
+  
+
+
+
+
+
+
+  
+
+  
+    <div>
+      <div class="text-center mb-8 mt-4">
+        
+          <h1 class="text-3xl font-bold text-center">Adatbázisok: hogy működnek, hogy válasszunk?</h1>
+        
+
+        
+        
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="mx-auto max-w-2xl px-4">
+  <article role="main" class="blog-post">
+    <ul>
+<li><a href="/posts/fullstack-onalloan/">(1. resz) Full stack fejlesztő önállóan, kezdőknek</a></li>
+<li><a href="/posts/programozas-go-nyelven/">(2. resz) Programozás alapjai Go nyelven</a></li>
+<li>(3. resz) Hálózat programozás alapjai Go nyelven</li>
+<li>(4. resz) Backend fejlesztés Go nyelven</li>
+<li><a href="/posts/adatbazisok">(5. resz) Adatbázisok: hogy működnek, hogy válasszunk?</a></li>
+<li><a href="/posts/frontend-fejlesztes-alapjai">(6. resz) Frontend fejlesztés alapjai</a></li>
+</ul>
+<p>Az adatbázisok elsődleges feladata hogy megbízhatóan tárolja az adatokat és kereshetővé tegye. Nagyon sok féle adatbázis van, fontos hogy mindig a feladathoz megfelelőt válasszuk. A modern webes rendszerek általában több adatbázist is használnak párhuzamosan, akár ugyanazon adatok tárolására.</p>
+<p>A kiszolgált kérések típusa szerint 2 nagy csoportja van az adatbázisoknak:</p>
+<h2 id="oltp-online-transaction-processing">OLTP (Online transaction processing)</h2>
+<p>Nagy mennyisegű, gyors, egyszerű kéréseket szolgálnak ki, relativ kevés adaton. Például webáruházaknál a rendelés feladása, regisztráció elmentése, kosár lekérdezése.</p>
+<h2 id="olap-online-analytical-processing">OLAP (Online analytical processing)</h2>
+<p>Kis mennyiségű, komplex, sokáig tartó kéréseket szolgálnak ki, nagy mennyiségű adaton. Általában adatelemzésre, statisztikákra használjuk.</p>
+<p>Ezek nem kizárólagos csoportok, sok adatbázis támogatja ay OLTP és az OLAP műveletek is.</p>
+<h2 id="milyen-tipusu-adatokat-tudunk-tarolni">Milyen tipusu adatokat tudunk tarolni?</h2>
+<p>A különböző típusú adatokra, vannak specializált adatbázisok, amik hatékonyan tudnak dolgozni az adott adattípussal.</p>
+<h3 id="kulcs-érték-tárolók">Kulcs-érték tárolók</h3>
+<p>Egyszerűen használható adatbázisok, amik általában kulcs + érték párokat tudnak tárolni. A kulcs alapján lehet lekérdezni az adatokat. Pl.: gyorsítótár</p>
+<p>Két másik esetben is gyakran előfordul:</p>
+<ul>
+<li>Nagy teljesítményigényű programoknál</li>
+<li>Magasabb szintű adatbázisok tárolómotorjaként</li>
+</ul>
+<h4 id="példák">Példák</h4>
+<ul>
+<li><a href="https://github.com/dgraph-io/badger">Badger</a> Go nyelven írt, beágyazható közvetlenül a programba és a Dgraph alapja is</li>
+<li><a href="https://memcached.org">Memcached</a> Gyorsítótár</li>
+<li><a href="https://redis.io">Redis</a> Sokoldalú memória alapú adatbázis, kulcs-érték tárolónak is használható</li>
+<li><a href="http://rocksdb.org">RocksDB</a> A Facebook fejleszti, sok adatbázis épül rá</li>
+<li><a href="https://www.symas.com/lmdb">LMDB</a> Kicsi, nagyon gyors, beágyazható adatbázis, sok adatbázis épül rá</li>
+<li><a href="https://github.com/tikv/tikv">TiKV</a> Eloszott tranzakciókra képes kulcs-érték tároló, a TiDB alapja</li>
+</ul>
+<h3 id="relációs-adatbázisok">Relációs adatbázisok</h3>
+<p>Előre definiált, összekapcsolható séma szerint tárolja az adatokat. Általában SQL nyelven lehet programozni. Ezek a leggyakrabban használt adatbázisok a webes rendszerekben, szinte mindig jelen van.</p>
+<h4 id="példák-1">Példák</h4>
+<ul>
+<li><a href="https://www.postgresql.org">PostgreSQL</a> Ez a legnagyobb tudású nyílt forráskódú relációs adatbáziskezelő, sokoldalúan használható</li>
+<li><a href="https://mariadb.org">MariaDB</a> A MySQL forkolt és továbbfejlesztett változata</li>
+<li><a href="https://www.cockroachlabs.com">CockroachDB</a> Elsődlegesen cloud környezetre van fejlesztve, PostgreSQL kompatibilis</li>
+<li><a href="https://en.pingcap.com/tidb">TiDB</a> Elsődlegesen cloud környezetre van fejlesztve, MySQL kompatibilis</li>
+</ul>
+<h3 id="dokumentum-orientált">Dokumentum-orientált</h3>
+<p>Dokumentumokban tárolja az adatokat, előre definiált séma nélkül. A dokumentumok kulcs-érték párokból álló adatok. Általában ugyan arra a célra használjuk mint a relációs adatbázisokat. Régebben a relációs adatbázisok nem támogatták ilyen módon a dokumentumok tárolását, de azóta felzárkóztak és a legtöbb felhasználási módra előnyösebbek a relációs adatbázisok.</p>
+<h4 id="példák-2">Példák</h4>
+<ul>
+<li><a href="https://www.mongodb.com/">MongoDB</a></li>
+</ul>
+<h3 id="oszlop-orientált">Oszlop-orientált</h3>
+<p>Elsődlegesen OLAP típusú kérések kiszolgálására szolgálnak. Ezeknél a lekérdezéseknél nagyságrendekkel gyorsabbak mint a sor-orienentált adatbázisok mert jobban ki tudják használni a CPU gyorsítótárakat, tömörítő algoritmusokat, SIMD utasításokat.</p>
+<h4 id="példák-3">Példák</h4>
+<ul>
+<li><a href="https://clickhouse.com/">ClickHouse</a></li>
+<li><a href="https://arrow.apache.org/datafusion/">DataFusion</a></li>
+</ul>
+<h3 id="vektor-orientált">Vektor-orientált</h3>
+<p>A vektoros adatbázisok alapvetően a vektorok közötti hasonlóság alapú keresésekre szolgálnak. Általában neurális hálók által generált reprezentációkat tároljuk benne. Így működnek a szemantikus keresők (mint pl a google), modern ajánló rendszerek, multimedia keresők (kép, hang, video).</p>
+<h4 id="példák-4">Példák</h4>
+<ul>
+<li><a href="https://qdrant.tech/">Qdrant</a></li>
+<li><a href="https://milvus.io/">Milvus</a></li>
+</ul>
+<h3 id="szöveg-full-text">Szöveg (full-text)</h3>
+<p>A szöveges keresők nagy mennyiségű szövegben tudnak hatékonyan keresni, mint a webáruházak termék leírásai, szerver napló fileok.</p>
+<h4 id="példák-5">Példák</h4>
+<ul>
+<li><a href="https://www.elastic.co/">Elastic</a></li>
+<li><a href="https://solr.apache.org/">Solr</a></li>
+<li><a href="https://quickwit.io/">Quickwit</a></li>
+<li><a href="https://www.meilisearch.com/">Meili</a></li>
+</ul>
+<h3 id="gráf">Gráf</h3>
+<p>A gráf olyan adatszerkezet ami csomópontokból áll és az ezeket összekötő élekből. Sokmindent lehet ilyen formában reprezentálni (pl.: felhasználók preferenciái, szociális hálózatok, tudás hálózatok).</p>
+<h4 id="példák-6">Példák</h4>
+<ul>
+<li><a href="https://dgraph.io/">Dgraph</a></li>
+<li><a href="https://neo4j.com">Neo4j</a></li>
+<li><a href="https://entgo.io/">Ent</a> Nem adatbázis, hanem egy go modul, amivel relációs adatbázisokat használhatunk gráf adatbázisként</li>
+</ul>
+<h3 id="idősor">Idősor</h3>
+<p>Az idősor olyan adat (legtöbbször szám), amit időponthoz kötötten tárolunk el, és időpont vagy intervallum alapján keresünk. (pl.: mérési adatok)</p>
+<h4 id="példák-7">Példák</h4>
+<ul>
+<li><a href="https://www.influxdata.com/">InfluxDB</a></li>
+<li><a href="https://prometheus.io/">Prometheus</a></li>
+</ul>
+<h2 id="hogyan-tárolják-az-adatbázisok-az-adatok">Hogyan tárolják az adatbázisok az adatok?</h2>
+<p>Az adatbázisok memóriában és fileokban is tárolnak bizonyos adatokat, de van egy fő tárolási mód, a másik csak kiegészítő.</p>
+<h3 id="elsődlegesen-ram-alapú-tárolás">Elsődlegesen RAM alapú tárolás</h3>
+<p>A kéréseket a RAM-ban lévő adatokból szolgálják ki, a filerendszert naplózásra és az adatok mentésére használják. Ezek nagyságrendekkel gyorsabbak mint a file alapú tárolók, hatékonyabban férnek hozzá az adatokhoz és egyszerűbb a megvalósításuk. A hátrányuk az hogy a RAM lényegesebb drágább és kisebb mint HDD vagy SSD.</p>
+<h3 id="elsődlegesen-file-alapú-tárolás">Elsődlegesen file alapú tárolás</h3>
+<p>SSD vagy HDD tárolón a filerendszerben tárolják az adatokat és a kiszolgálás is innen történik. A RAM-ot főleg gyorsítótárazásra használják. Ezek komplexebbek és lassabbak, viszont nagyságrendekkel több adatot tudnak tárolni, olcsóbban.
+Az adat és index fileok kezelésére a 2 legelterjedtebb algoritmus az <a href="https://en.wikipedia.org/wiki/Log-structured_merge-tree">LSMT</a> variánsok és a <a href="https://en.wikipedia.org/wiki/B-tree">B-Tree</a> variánsok.</p>
+<p>A 2 féle algoritmusra az írási és olvasási sebesség közötti kompromisszum miatt van szükség. Minél nagyobb az írási sebesség, az olvasási annál lassabb lesz és forditva.</p>
+<h2 id="hogy-tudnak-gyorsan-keresni-az-adatbázisok">Hogy tudnak gyorsan keresni az adatbázisok?</h2>
+<p>Ha nem tudjuk milyen sorrendben vannak az adatok, akkor csak úgy tudunk egy elemet megkeresni hogy az összeset ellenőrizzük. Ez sok adatnál a gyakorlatban túl lassú lenne.</p>
+<p>A gyors keresésre az adatbázisok <strong>index</strong>eket használnak. Az indexek sorba rendezve tárolják az adatokat, a sorrend ismeretében pedig nem kell minden elemet megnézni.</p>
+<p>Az alap ötlet ugyan az, mint amikor egy könyvben keresünk egy adott számú oldalt. A leggyorsabban úgy találjuk meg hogy kinyitjuk a könyvet a közepén, megnézzük hogy amit keresünk a közepétől merre van, újra megfelezzük az oldalakat és így tovább, amíg meg nem találjuk. Így legrosszabb esetben log2(<em>n</em>) oldalt kell megnéznünk <em>n</em> helyett. Ezt az algoritmust <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm">bináris keresés</a>nek hívják.</p>
+<p>Viszont a bináris keresés csak akkor működik ha teljesen rendezett adatok között keresünk. Az adatok rendezése is erőforrás igényes, ezért a legtöbb adatbázis nem tartja teljesen rendezetten az adatokat.</p>
+<p>Több féle algoritmus létezik az indexelésre, hogy melyik a legjobb az adott esetben, attól függ:</p>
+<ul>
+<li>Milyen típusú az adat (pl.: szám, szöveg, földrajzi, vektor)</li>
+<li>Az adat mennyisége</li>
+<li>Milyen gyakran változnak a meglévő adatok</li>
+<li>Milyen gyakran jönnek új adatok</li>
+<li>Milyen hardveren tároljuk (ssd, hdd, ram)</li>
+<li>Milyen lekérdezéseket kell végrehajtani</li>
+<li>Mennyi lekérdezést kell végrehajtani</li>
+</ul>
+<p>Az indexelő algoritmusok a rendezés és a keresés erőforrásigényei között egyensúlyoznak, úgy hogy a fenti kritériumokkal együtt optimális legyen az egész rendszer teljesítéménye. RAM alapú tárolóknál az index mérete is kritikus lehet.</p>
+<h2 id="elosztott-adatbázisok">Elosztott adatbázisok</h2>
+<p>Az elosztott adatbázisok, több gépen futnak, tárolnak adatok és hálózaton kommunikálnak.</p>
+<h3 id="előnyei">Előnyei</h3>
+<ul>
+<li><strong>Hibatűrés:</strong> Ha van elég gép a rendszerben, akkor egy néhány gép kiesése nem okoz szolgáltatás kiesést</li>
+<li><strong>Skálázhatóság és teljesítmény:</strong> Több gép összekapcsolásával nagyságrendekkel nagyobb teljesítmény érhető el, mint amire egy gép képes lehet és szinte a végtelenségig bővíthető</li>
+</ul>
+<h3 id="hátrányai">Hátrányai</h3>
+<ul>
+<li><strong>Lassúság:</strong> Az egy gépből kihozható teljesítmény általában sokkal kisebb mint egy nem-eloszott rendszerben (kivéve ha teljesen feladjuk a hibatűrést)</li>
+<li><strong>Hibák:</strong> Meglepően sok módon romolhat el, bonyolultabb a hibakeresés és a helyreállítás is</li>
+</ul>
+<p>A hálózat relatív lassú és megbízhatatlan (ráadásul sokféle képpen megbízhatatlan). Ez azt okoza hogy, ha a hálózat valamilyen hiba miatt két hálózatra szakad, akkor a rendszernek választania kell hogy potenciálisan inkonzisztens adatot szolgál ki vagy hibát ad vissza.
+Ha nincs semmilyen hiba, akkor is a késleltetés lesz magas, vagy nem garantálható a konzisztencia. (PACELC theorem)</p>
+<p>A különböző adatbázisok, különböző kompromisszumokat kötnek a rendelkezésre állás, konzisztencia, hálózati hiba tolerancia terén.</p>
+<h2 id="adatbázis-választásnál-ezeket-ellenőrizzük">Adatbázis választásnál ezeket ellenőrizzük</h2>
+<ul>
+<li><strong>Adattípus:</strong> kezeli a szükséges adattípust és támogatja a szükséges lekérdezéseket</li>
+<li><strong>Adatmennyiség:</strong> tudja kezelni a szükséges és a jövőben várható adatmennyiséget és nem romlik a teljesítménye elfogadhatatlan mértékben a várható mennyiségnél</li>
+<li><strong>Konkurens kliensek száma:</strong> támogat annyi felhasználót egyszerre ami szükséges</li>
+<li><strong>Írási és olvasási minta:</strong> megfelelő a teljesítménye a várható írási / olvasási gyakoriság, mennyiség mellett. Ezt ellenőrizni kell akkor is ha már nagy mennyiségű adat van a rendszerben.</li>
+<li><strong>Elosztott adatbázisnál:</strong> támogatja a nekünk elfogadható rendelkezésreállási, hibatűrési és konzistencia szintet</li>
+<li><strong>Licensz:</strong> használhatjuk arra amire szeretnénk, nem minden használati módra vonatkozik ugyan az a licensz</li>
+<li><strong>Ár / üzleti modell:</strong> egyes adatbázisoknak az az üzleti modellje hogy az ingyenes verzióval behúzzák az felhasználókat és később muszáj lesz a fizetős változatot használni, ami akár nagy költség vagy jogilag problémás is lehet</li>
+</ul>
+
+
+    
+
+    
+
+    
+      
+
+      
+    
+  </article>
+
+  
+    <ul class="flex justify-center my-4">
+      
+        <li class="bg-black text-white black rounded-full font-bold px-4 py-2">
+          <a href="https://cmldev2.github.io/posts/frontend-fejlesztes-alapjai/" data-toggle="tooltip" data-placement="top" title="Frontend fejlesztés alapjai">&larr; Previous Post</a>
+        </li>
+      
+      
+    </ul>
+  
+
+
+  
+
+</div>
+
+      
+<footer>
+  <div class="max-w-2xl mx-auto text-xs text-center my-8 text-gray-400">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.101.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+
