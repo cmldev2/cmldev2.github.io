@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="hu" itemscope itemtype="http://schema.org/WebPage">
+  <head>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Backend fejlesztés alapjai - NodeJs - Programozás tanulás cikkek</title>
+  <meta name="description" content="A backend egy (vagy több) szerver oldali program, ami frontendtől jövő kérésket megválaszolja. Ezekben a kérésekben lehet szinte bármi, de leggyakrabban adattárolás, módosítás, lekérdezés, törlés történik.
+A teljes kommunikáció ilyen kérés / válasz üzenetekből áll. Amikor beírunk egy url-t a böngészőbe, akkor a böngésző is rögtön egy HTTP kérést küld a szervernek. A szerver pedig visszaküldi a frontend kódját.
+A HTML kód értelmezése után a böngésző újabb kéréseket küldhet a szervernek, például a Css, képek, JavaScript kód letöltse.">
+  <meta name="author" content="Milan"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "Programozás tanulás cikkek",
+    
+    "url": "https:\/\/cmldev2.github.io\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "https:\/\/cmldev2.github.io\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "https:\/\/cmldev2.github.io\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "https:\/\/cmldev2.github.io\/posts\/backend-fejlesztes-alapjai-nodejs\/",
+          "name": "Backend fejlesztés alapjai node js"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Milan"
+  },
+  "headline": "Backend fejlesztés alapjai - NodeJs",
+  "description" : "A backend egy (vagy több) szerver oldali program, ami frontendtől jövő kérésket megválaszolja. Ezekben a kérésekben lehet szinte bármi, de leggyakrabban adattárolás, módosítás, lekérdezés, törlés történik.\nA teljes kommunikáció ilyen kérés \/ válasz üzenetekből áll. Amikor beírunk egy url-t a böngészőbe, akkor a böngésző is rögtön egy HTTP kérést küld a szervernek. A szerver pedig visszaküldi a frontend kódját.\nA HTML kód értelmezése után a böngésző újabb kéréseket küldhet a szervernek, például a Css, képek, JavaScript kód letöltse.",
+  "inLanguage" : "hu",
+  "wordCount":  745 ,
+  "datePublished" : "2022-08-13T07:40:07",
+  "dateModified" : "2022-08-13T07:40:07",
+  "image" : "https:\/\/cmldev2.github.io\/img\/logo.svg",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "https:\/\/cmldev2.github.io\/posts\/backend-fejlesztes-alapjai-nodejs\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "https:\/\/cmldev2.github.io\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "https:\/\/cmldev2.github.io\/img\/logo.svg",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Backend fejlesztés alapjai - NodeJs" />
+<meta property="og:description" content="A backend egy (vagy több) szerver oldali program, ami frontendtől jövő kérésket megválaszolja. Ezekben a kérésekben lehet szinte bármi, de leggyakrabban adattárolás, módosítás, lekérdezés, törlés történik.
+A teljes kommunikáció ilyen kérés / válasz üzenetekből áll. Amikor beírunk egy url-t a böngészőbe, akkor a böngésző is rögtön egy HTTP kérést küld a szervernek. A szerver pedig visszaküldi a frontend kódját.
+A HTML kód értelmezése után a böngésző újabb kéréseket küldhet a szervernek, például a Css, képek, JavaScript kód letöltse.">
+<meta property="og:image" content="https://cmldev2.github.io/img/logo.svg" />
+<meta property="og:url" content="https://cmldev2.github.io/posts/backend-fejlesztes-alapjai-nodejs/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Programozás tanulás cikkek" />
+
+  <meta name="twitter:title" content="Backend fejlesztés alapjai - NodeJs" />
+  <meta name="twitter:description" content="A backend egy (vagy több) szerver oldali program, ami frontendtől jövő kérésket megválaszolja. Ezekben a kérésekben lehet szinte bármi, de leggyakrabban adattárolás, módosítás, lekérdezés, törlés …">
+  <meta name="twitter:image" content="https://cmldev2.github.io/img/logo.svg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href='https://cmldev2.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.101.0" />
+  <link rel="alternate" href="https://cmldev2.github.io/index.xml" type="application/rss+xml" title="Programozás tanulás cikkek">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cmldev2.github.io/css/chroma.css" />
+  <link rel="stylesheet" href="https://cmldev2.github.io/css/main.css" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-C9CMG2Q8J7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-C9CMG2Q8J7');
+</script>
+
+  </head>
+  <body class="antialiased bg-white font-sans">
+    <nav class="bg-white">
+  <div class="flex items-center shadow">
+    <div class="pl-4 py-4 mr-4 flex-none">
+      <a class="font-bold block" href="https://cmldev2.github.io/"><img class="" src="https://cmldev2.github.io/img/logo.svg" alt="Programozás tanulás cikkek" /></a>
+    </div>
+
+    <div class="flex-1">
+      <ul class="flex justify-end mx-4">
+        
+            <li>
+              <a title="Posts" href="/posts/">Posts</a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+    
+  
+  
+  
+
+
+
+
+
+
+  
+
+  
+    <div>
+      <div class="text-center mb-8 mt-4">
+        
+          <h1 class="text-3xl font-bold text-center">Backend fejlesztés alapjai - NodeJs</h1>
+        
+
+        
+        
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="mx-auto max-w-2xl px-4">
+  <article role="main" class="blog-post">
+    <p>A backend egy (vagy több) szerver oldali program, ami frontendtől jövő kérésket megválaszolja. Ezekben a kérésekben lehet szinte bármi, de leggyakrabban adattárolás, módosítás, lekérdezés, törlés történik.</p>
+<p>A teljes kommunikáció ilyen kérés / válasz üzenetekből áll. Amikor beírunk egy url-t a böngészőbe, akkor a böngésző is rögtön egy HTTP kérést küld a szervernek. A szerver pedig visszaküldi a frontend kódját.</p>
+<p>A HTML kód értelmezése után a böngésző újabb kéréseket küldhet a szervernek, például a Css, képek, JavaScript kód letöltse. A JavaScript a böngésző API-ján keresztül, önmaga is tud kéréseket küldeni.</p>
+<h2 id="mi-az-a-kérés-és-válasz">Mi az a &ldquo;kérés&rdquo; és &ldquo;válasz&rdquo;?</h2>
+
+
+
+<div class="goat svg-container ">
+  
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      font-family="Menlo,Lucida Console,monospace"
+      
+        viewBox="0 0 408 89"
+      >
+      <g transform='translate(8,16)'>
+<path d='M 0,0 L 88,0' fill='none' stroke='currentColor'></path>
+<path d='M 296,0 L 376,0' fill='none' stroke='currentColor'></path>
+<path d='M 112,32 L 152,32' fill='none' stroke='currentColor'></path>
+<path d='M 216,32 L 264,32' fill='none' stroke='currentColor'></path>
+<path d='M 112,48 L 160,48' fill='none' stroke='currentColor'></path>
+<path d='M 232,48 L 256,48' fill='none' stroke='currentColor'></path>
+<path d='M 0,64 L 88,64' fill='none' stroke='currentColor'></path>
+<path d='M 296,64 L 376,64' fill='none' stroke='currentColor'></path>
+<path d='M 0,0 L 0,64' fill='none' stroke='currentColor'></path>
+<path d='M 88,0 L 88,64' fill='none' stroke='currentColor'></path>
+<path d='M 296,0 L 296,64' fill='none' stroke='currentColor'></path>
+<path d='M 376,0 L 376,64' fill='none' stroke='currentColor'></path>
+<polygon points='120.000000,48.000000 108.000000,42.400002 108.000000,53.599998' fill='currentColor' transform='rotate(180.000000, 112.000000, 48.000000)'></polygon>
+<polygon points='272.000000,32.000000 260.000000,26.400000 260.000000,37.599998' fill='currentColor' transform='rotate(0.000000, 264.000000, 32.000000)'></polygon>
+<text text-anchor='middle' x='16' y='36' fill='currentColor' style='font-size:1em'>F</text>
+<text text-anchor='middle' x='24' y='36' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='32' y='36' fill='currentColor' style='font-size:1em'>o</text>
+<text text-anchor='middle' x='40' y='36' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='48' y='36' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='56' y='36' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='64' y='36' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='72' y='36' fill='currentColor' style='font-size:1em'>d</text>
+<text text-anchor='middle' x='128' y='4' fill='currentColor' style='font-size:1em'>H</text>
+<text text-anchor='middle' x='136' y='4' fill='currentColor' style='font-size:1em'>á</text>
+<text text-anchor='middle' x='144' y='4' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='152' y='4' fill='currentColor' style='font-size:1em'>ó</text>
+<text text-anchor='middle' x='160' y='4' fill='currentColor' style='font-size:1em'>z</text>
+<text text-anchor='middle' x='168' y='4' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='168' y='36' fill='currentColor' style='font-size:1em'>K</text>
+<text text-anchor='middle' x='176' y='4' fill='currentColor' style='font-size:1em'>t</text>
+<text text-anchor='middle' x='176' y='36' fill='currentColor' style='font-size:1em'>é</text>
+<text text-anchor='middle' x='176' y='52' fill='currentColor' style='font-size:1em'>V</text>
+<text text-anchor='middle' x='184' y='36' fill='currentColor' style='font-size:1em'>r</text>
+<text text-anchor='middle' x='184' y='52' fill='currentColor' style='font-size:1em'>á</text>
+<text text-anchor='middle' x='192' y='36' fill='currentColor' style='font-size:1em'>é</text>
+<text text-anchor='middle' x='192' y='52' fill='currentColor' style='font-size:1em'>l</text>
+<text text-anchor='middle' x='200' y='36' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='200' y='52' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='208' y='52' fill='currentColor' style='font-size:1em'>s</text>
+<text text-anchor='middle' x='216' y='52' fill='currentColor' style='font-size:1em'>z</text>
+<text text-anchor='middle' x='312' y='36' fill='currentColor' style='font-size:1em'>B</text>
+<text text-anchor='middle' x='320' y='36' fill='currentColor' style='font-size:1em'>a</text>
+<text text-anchor='middle' x='328' y='36' fill='currentColor' style='font-size:1em'>c</text>
+<text text-anchor='middle' x='336' y='36' fill='currentColor' style='font-size:1em'>k</text>
+<text text-anchor='middle' x='344' y='36' fill='currentColor' style='font-size:1em'>e</text>
+<text text-anchor='middle' x='352' y='36' fill='currentColor' style='font-size:1em'>n</text>
+<text text-anchor='middle' x='360' y='36' fill='currentColor' style='font-size:1em'>d</text>
+</g>
+
+    </svg>
+  
+</div>
+<p>A &ldquo;kérés&rdquo; és a &ldquo;válasz&rdquo; <strong>HTTP</strong> formátumban leírt üzenet, amit hálózaton keresztül küldünk a szervernek, a szerver pedig ugyan ilyen formában visszaküldi a választ. Ebbe van belekódolva milyen műveletet akarunk végrehajtani és a hozzá tartozó adatok is (ha vannak).</p>
+<p>A HTTP formátum (protokoll más néven) részletes leírása <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP">itt</a> található.</p>
+<h3 id="http-kommunikáció-példa">HTTP kommunikáció példa</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">(kérés) GET / HTTP/1.1
+</span></span><span class="line"><span class="cl">(kérés) Host: localhost:1323
+</span></span><span class="line"><span class="cl">(kérés) Accept: */*
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">(válasz) HTTP/1.1 200 OK
+</span></span><span class="line"><span class="cl">(válasz) Content-Type: text/plain; charset=UTF-8
+</span></span><span class="line"><span class="cl">(válasz) Content-Length: 13
+</span></span><span class="line"><span class="cl">(válasz) Hello, World!
+</span></span></code></pre></div><h2 id="webszerver">Webszerver</h2>
+<p>A webszerver az a komponense a backend programnak, ami a HTTP kommunikációt elvégzi. Miután beérkezik egy HTTP kérés, a webszerver értelmezi a kérést, feldolgozza és visszaküldi a választ.</p>
+<p>A &ldquo;feldolgozás&rdquo; sokmindent jelenthet, pl.:</p>
+<ul>
+<li>Ha a kérés egy filet (kép, css, stb) kér akkor megkeresi a filrendszerben és a képet küldi vissza</li>
+<li>Ha egy API kérés akkor megkeresi a hozzá tartozó programkódot, lefuttatja a kódot és visszaküldi az eredményt</li>
+</ul>
+<p>Szinte mindig több webszerver van a rendszerben, van amelyiknek az a feladata hogy másik webszervereknek továbbítsa a kérést (reverse proxy).</p>
+<p>A webszerver lehet teljesen különálló program (pl <a href="https://www.nginx.com/">Nginx</a>, <a href="https://traefik.io/">Traefik</a>) és lehet beépítve a backend programba is.</p>
+<h2 id="backend-program-példa-http-kérés-feldolgozása-és-válasz">Backend program példa (HTTP kérés feldolgozása és válasz)</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// Keretrendszer betöltése
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">const</span> <span class="nx">express</span> <span class="p">=</span> <span class="nf">require</span><span class="p">(</span><span class="s">&#34;express&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="kd">const</span> <span class="nx">app</span> <span class="p">=</span> <span class="nf">express</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Route-ok regisztrálása
+</span></span></span><span class="line"><span class="cl"><span class="c1">// Kezdőlap
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">&#34;/&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">res</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="s">&#34;Home page&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Hello
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s">&#34;/hello&#34;</span><span class="p">,</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">res</span><span class="p">.</span><span class="nf">send</span><span class="p">(</span><span class="s">&#34;Hello World!&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Webszerver indíátsa a 3000-es porton
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nf">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Ez példa egy <a href="https://nodejs.org/en/">NodeJS</a>-en futó, JavaScript program, <a href="https://expressjs.com/">Express</a> keretrendszerrel. Ezen a példa kódon nézzük meg, miként dolgozza fel és válaszolja meg egy webszerver a kérést.</p>
+<p>A 2., 3. sorban betöltjük a keretrendszert, ez nekünk most nem fontos, az ExpressJS dokumentációjában benne van részletesen.</p>
+<p>A &ldquo;Route-ok regisztrálása&rdquo; részben megmondjuk a keretrendszernek, hogy ha a kérés <strong>Method</strong> része &ldquo;<strong>GET</strong>&rdquo; és a <strong>Path</strong> rész egyezik a js kódban megadottal, akkor futassa le a beállított függvényt. A függvény pedig megkapja a kérést és választ reprezentáló objektumokat. A webes keretrendszerekben általában <strong>route</strong>-oknak hívják a a HTTP protokoll <strong>Path</strong> részét, de ugyan arról van szó.</p>
+<p>A függvény a <strong>res</strong> objetumba beírja a választ, a keretrendszer pedig visszaküldi.</p>
+<h3 id="http-kérések-formátuma">HTTP kérések formátuma</h3>
+<p><img src="http_request.png" alt="HTTP request">
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview%5D">Forrás (MDN)</a></p>
+<p>Angolul, a keretrendszerekben és a HTTP protokollban a kérést <strong>request</strong>-nek, a választ <strong>response</strong>-nak hívják és általában <strong>res</strong>, <strong>req</strong>-nek rövidítik.</p>
+<h3 id="-kezdőlap-route-példa">// Kezdőlap route példa</h3>
+<p><span class="bg-indigo-500 text-white p-2">Kérés</span></p>
+<div class="text-gray-400 border-2 -mt-4 p-2 border-indigo-500 border-dotted whitespace-pre-wrap"><span class="bg-cyan-200 text-black">GET</span> <span class="bg-pink-600 text-white"> / </span> HTTP/1.1
+Host: localhost:3000
+Accept: */*
+</div>
+<div class="whitespace-pre">
+app.<span class="bg-cyan-200 text-black">get</span>(<span class="bg-pink-600 text-white">"/"</span>, (<span class="bg-indigo-500 text-white">req</span>, <span class="bg-lime-500 text-lime-900">res</span>) => {
+  <span class="bg-lime-500 text-lime-900">res</span>.send(<span class="bg-yellow-400 text-black">"Home page"</span>);
+});
+</div>
+<p><span class="bg-lime-500 text-lime-900 p-2 mt-4 inline-block">Válasz</span></p>
+<div class="text-gray-400  border-2 -mt-6 p-2 border-lime-500 border-dotted whitespace-pre">HTTP/1.1200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 9
+<p><span class="bg-yellow-400 text-black">Home page</span></div></p>
+<h3 id="-hello-route-példa">// Hello route példa</h3>
+<p><span class="bg-indigo-500 text-white p-2">Kérés</span></p>
+<div class="text-gray-400 border-2 -mt-4 p-2 border-indigo-500 border-dotted whitespace-pre-wrap"><span class="bg-cyan-200 text-black">GET</span> <span class="bg-pink-600 text-white">/hello</span> HTTP/1.1
+Host: localhost:3000
+Accept: */*
+</div>
+<div class="whitespace-pre">
+app.<span class="bg-cyan-200 text-black">get</span>(<span class="bg-pink-600 text-white">"/hello"</span>, (<span class="bg-indigo-500 text-white">req</span>, <span class="bg-lime-500 text-lime-900">res</span>) => {
+  <span class="bg-lime-500 text-lime-900">res</span>.send(<span class="bg-yellow-400 text-black">"Hello World!"</span>);
+});
+</div>
+<p><span class="bg-lime-500 text-lime-900 p-2 mt-4 inline-block">Válasz</span></p>
+<div class="text-gray-400  border-2 -mt-6 p-2 border-lime-500 border-dotted whitespace-pre">HTTP/1.1200 OK
+Content-Type: text/html; charset=utf-8
+Content-Length: 12
+<p><span class="bg-yellow-400 text-black">Hello World!</span></div></p>
+<h2 id="hálózati-kommunikáció">Hálózati kommunikáció</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">16
+</span><span class="hl"><span class="lnt">17
+</span></span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="c1">// Webszerver indíátsa a 3000-es porton
+</span></span></span><span class="line hl"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nf">listen</span><span class="p">(</span><span class="mi">3000</span><span class="p">);</span></span></span></code></pre></td></tr></table>
+</div>
+</div>
+<p>A 17. sorban, indul el a webszerver komponens, ami kezeli a hálózati kommunikációt. A webszerver ezen része, alapvetően egy végtelen ciklus, ami folyamatosan figyeli hogy van-e új bejövő adat a hálózatról vagy kimenő a szerver programtól.</p>
+<p><img src="network.png" alt="Hálózat működése"></p>
+<p>Ez kép a HTTP kérések megválaszolásának a folyamatát mutatja be, az 5 szín 5 külön kapcsolatot reprezentál.</p>
+<ol>
+<li><strong>Hálózat</strong>on érkeznek folyamatosan a csomagok. Az adatok csomagokra vannak szétbontva és úgy továbbítódnak a hálózaton, ezek a színes négyzetek.</li>
+<li>Az <strong>operációs rendzser</strong> szétválogatja a csomagokat és minden klienshez (K1..K5) létrehoz egy adatszerkezetet, amiben többek között van egy buffer a bejövő és egy a kimenő adatoknak.</li>
+<li>A <strong>NodeJs</strong> figyeli a bejövő buffert, amikor van adat, akkor azt átmásolja a <strong>req</strong> objektumba.</li>
+<li>A <strong>NodeJs</strong> az áltálunk írt kódtól jövő adatokat is figyeli. Amikor a <strong>send</strong> függvénnyel a <strong>res</strong> objektumba írjuk az adatokat, akkor a NodeJs érzékeli és átmásolja a kapcsolathoz tartozó kimeneti bufferbe.</li>
+<li>Eztán az <strong>operációs rendszer</strong> elküldi a kimeneti buffer adatait a hálózaton, így kapja vissza az adatot a kliens (böngésző általában).</li>
+</ol>
+
+
+    
+
+    
+
+    
+      
+
+      
+    
+  </article>
+
+  
+    <ul class="flex justify-center my-4">
+      
+        <li class="bg-black text-white black rounded-full font-bold px-4 py-2">
+          <a href="https://cmldev2.github.io/posts/adatbazisok/" data-toggle="tooltip" data-placement="top" title="Adatbázisok: hogy működnek, hogy válasszunk?">&larr; Previous Post</a>
+        </li>
+      
+      
+    </ul>
+  
+
+
+  
+
+</div>
+
+      
+<footer>
+  <div class="max-w-2xl mx-auto text-xs text-center my-8 text-gray-400">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+          
+        </ul>
+        <p class="credits copyright text-muted">
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.101.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

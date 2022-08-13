@@ -5,7 +5,18 @@
     <link>https://cmldev2.github.io/</link>
     <description>Recent content on Programozás tanulás cikkek</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Aug 2022 19:40:07 +0200</lastBuildDate><atom:link href="https://cmldev2.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 13 Aug 2022 07:40:07 +0200</lastBuildDate><atom:link href="https://cmldev2.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Backend fejlesztés alapjai - NodeJs</title>
+      <link>https://cmldev2.github.io/posts/backend-fejlesztes-alapjai-nodejs/</link>
+      <pubDate>Sat, 13 Aug 2022 07:40:07 +0200</pubDate>
+      
+      <guid>https://cmldev2.github.io/posts/backend-fejlesztes-alapjai-nodejs/</guid>
+      <description>A backend egy (vagy több) szerver oldali program, ami frontendtől jövő kérésket megválaszolja. Ezekben a kérésekben lehet szinte bármi, de leggyakrabban adattárolás, módosítás, lekérdezés, törlés történik.
+A teljes kommunikáció ilyen kérés / válasz üzenetekből áll. Amikor beírunk egy url-t a böngészőbe, akkor a böngésző is rögtön egy HTTP kérést küld a szervernek. A szerver pedig visszaküldi a frontend kódját.
+A HTML kód értelmezése után a böngésző újabb kéréseket küldhet a szervernek, például a Css, képek, JavaScript kód letöltse.</description>
+    </item>
+    
     <item>
       <title>Adatbázisok: hogy működnek, hogy válasszunk?</title>
       <link>https://cmldev2.github.io/posts/adatbazisok/</link>

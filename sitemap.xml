@@ -2,16 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://cmldev2.github.io/posts/backend-fejlesztes-alapjai-nodejs/</loc>
+    <lastmod>2022-08-13T07:40:07+02:00</lastmod>
+  </url><url>
+    <loc>https://cmldev2.github.io/posts/</loc>
+    <lastmod>2022-08-13T07:40:07+02:00</lastmod>
+  </url><url>
+    <loc>https://cmldev2.github.io/</loc>
+    <lastmod>2022-08-13T07:40:07+02:00</lastmod>
+  </url><url>
     <loc>https://cmldev2.github.io/posts/adatbazisok/</loc>
     <lastmod>2022-08-04T19:40:07+02:00</lastmod>
   </url><url>
     <loc>https://cmldev2.github.io/posts/frontend-fejlesztes-alapjai/</loc>
-    <lastmod>2022-08-04T19:40:07+02:00</lastmod>
-  </url><url>
-    <loc>https://cmldev2.github.io/posts/</loc>
-    <lastmod>2022-08-04T19:40:07+02:00</lastmod>
-  </url><url>
-    <loc>https://cmldev2.github.io/</loc>
     <lastmod>2022-08-04T19:40:07+02:00</lastmod>
   </url><url>
     <loc>https://cmldev2.github.io/posts/programozas-go-nyelven/</loc>
